@@ -5,13 +5,12 @@ import SignUp from "./SignUp";
 
 function App() {
   let [sign, setSign] = useState(null);
-
   if (sign === "in") return <SignIn setSign={setSign} />;
   if (sign === "up") return <SignUp setSign={setSign} />;
 
   return (
     <div className="loginPage">
-      <h1 className="welcome">Welcome in my task!</h1>
+      <h1 className="welcome">Welcome!</h1>
       <Button
         className="button"
         type="primary"

@@ -1,24 +1,21 @@
 const initialState = {
-
-    userEmail: null,
-   // isAuthenticating: false
-}
+  userEmail: null,
+};
 
 const authReducer = (state = initialState, action) => {
-switch (action.type) {
+  switch (action.type) {
     case "signIn":
-        return {
-            ...state,
-            userEmail:action.payload
-        };
-        case "signUp":
-            return {
-                ...state,
-                userEmail:null
-            };
+      return {
+        ...state,
+        userEmail: action.payload,
+      };
+    case "signUp":
+      return {
+        ...state,
+        userEmail: null,
+      };
     default:
-        return state
-
-}
-}
-export default authReducer
+      return state;
+  }
+};
+export default authReducer;

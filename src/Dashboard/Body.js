@@ -48,7 +48,7 @@ function Body() {
         </div>
         <Button
 
-           disabled={`${value[0]["children"][0]["text"]=== "" ? "true" : ""}`}
+           disabled={`${value[0]["children"][0]["text"]=== "" ? "able" : ""}`}
           className="addBtn"
           type="primary"
           htmlType="submit"

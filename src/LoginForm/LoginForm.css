@@ -3,17 +3,18 @@
   opacity: 0.9;
   width: 35%;
   margin: 30px auto;
-  padding: 70px 20px 20px 0px;  
+  padding: 70px 20px 20px 0px;
   border: solid 1px black;
   height: 500px;
   position: relative;
 }
-.button{
+.button {
   margin-right: 10px;
   animation-name: text;
   animation-duration: 2s;
+  cursor: pointer;
 }
-.closeBtn{
+.closeBtn {
   cursor: pointer;
   position: absolute;
   font-size: 20px;
@@ -21,10 +22,10 @@
   top: 0;
 }
 
-.loginPage{
+.loginPage {
   text-align: center;
 }
-.welcome{
+.welcome {
   font-size: 40px;
   margin-top: 35px;
   animation-name: text;
@@ -32,6 +33,10 @@
 }
 
 @keyframes text {
-  from {opacity:0}
-  to {opacity:1}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

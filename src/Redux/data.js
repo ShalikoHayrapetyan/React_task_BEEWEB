@@ -1,23 +1,22 @@
 const initialState = {
-    items:null
-}
+  items: null,
+};
 
 const data = (state = initialState, action) => {
-switch (action.type) {
+  switch (action.type) {
     case "add":
-        return {
-            ...state,
-            items:[...state.items , action.payload]
-        };
-        case "get":
-            return {
-                ...state,
-                items:action.payload
-            };
+      return {
+        ...state,
+        items: [...state.items, action.payload],
+      };
+    case "get":
+      return {
+        ...state,
+        items: action.payload,
+      };
 
     default:
-        return state
-
-}
-}
-export default data
+      return state;
+  }
+};
+export default data;

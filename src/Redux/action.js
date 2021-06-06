@@ -12,6 +12,7 @@ export const signUp = (email) => (dispatch) => {
     type: "signUp",
   });
 };
+
 export const add = (newItem) => (dispatch) => {
   db.collection("Items")
     .doc(newItem.id)
@@ -29,6 +30,7 @@ export const add = (newItem) => (dispatch) => {
     payload: newItem,
   });
 };
+
 export const getData = () => (dispatch) => {
   db.collection("Items")
     .get()
@@ -46,6 +48,7 @@ export const getData = () => (dispatch) => {
       console.log("Error getting documents: ", error);
     });
 };
+
 export const deleteItem = (id) => (dispatch) => {
   db.collection("Items")
     .doc(id)

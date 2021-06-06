@@ -2,20 +2,23 @@ import { Button } from "antd";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../Redux/action";
-import {deleteItem} from "../Redux/action";
-
+import { deleteItem } from "../Redux/action";
 import Loading from "./Loading";
 
 function List() {
   const listItems = useSelector((state) => state.data.items);
   const dispatch = useDispatch();
   const [sort, setSort] = useState("Column");
+
   const changeSort = () => {
     if (sort === "Row") {
       setSort("Column");
     } else setSort("Row");
   };
-  useEffect(() => {dispatch(getData())}, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getData());
+  }, [dispatch]);
 
   if (!listItems) return <Loading />;
   return (
@@ -28,7 +31,9 @@ function List() {
             key={card.id}
           >
             {card.text}
-            <p className='delBtn' onClick={()=>dispatch(deleteItem(card.id))}>X</p>
+            <p className="delBtn" onClick={() => dispatch(deleteItem(card.id))}>
+              X
+            </p>
           </div>
         ))}
       </div>
